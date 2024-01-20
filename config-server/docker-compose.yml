@@ -1,0 +1,11 @@
+services:
+  config-server:
+    container_name: config-server
+    build: ./
+    ports:
+      - "8888:8888"
+    networks:
+      - net-bridge
+networks:
+  net-bridge:
+    driver: bridge
